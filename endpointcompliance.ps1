@@ -8,7 +8,6 @@ if (Test-Path -Path .\ComputersHT.xml) {
 $Config = [PSCustomObject]@{
     Name = 'Long Format Company Name'
     abbr = 'abbreviation'
-    ADCleanUp = $false
 }
 $Session:processing = $false
 
