@@ -90,9 +90,6 @@ function Update-EndpointComplianceData {
     # CrowdStrike Falcon
     #
 
-    # Creds stored securely in Microsoft.Powershell.SecretStore under user account
-    # https://github.com/CrowdStrike/psfalcon/wiki/Authentication#securing-credentials
-
     Request-FalconToken -ClientId $Secret:CrowdStrikeApi.username -ClientSecret $Secret:CrowdStrikeApi.GetNetworkCredential().password -Cloud 'PREFIX-HERE'
     $FalconHosts = Get-FalconHost -Detailed -All
     Write-Output "FalconHosts: $($FalconHosts.count)"
